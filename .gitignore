@@ -1,0 +1,8 @@
+/venv/
+/clients/.env
+/client/__init__.py
+/clients/__init__.py
+/clients/__pycache__/
+/portal/__pycache__/
+/portal/migrations/
+/portal/__init__.py
