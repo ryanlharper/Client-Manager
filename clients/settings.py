@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'portal', 
+    'analyze',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +125,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+else:
+    STATIC_ROOT = [os.path.join(BASE_DIR, "static")]
 
 STATIC_URL = '/static/'
 
@@ -132,7 +137,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "index"
 LOGOUT_REDIRECT_URL = "home"
 
 # Email backend settings

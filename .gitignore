@@ -6,3 +6,6 @@
 /portal/__pycache__/
 /portal/migrations/
 /portal/__init__.py
+/analyze/__pycache__/
+/analyze/migrations/
+/analyze/__init__.py

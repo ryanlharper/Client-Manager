@@ -1,0 +1,12 @@
+{% extends 'client_base.html' %}
+
+{% block title %}{{ user.first_name }} - Home{% endblock %}
+{% block content %}
+{{ block.super }}
+
+{% if user.is_authenticated %}
+    <h2>Client Portal</h2>
+{% else %}
+  <p>You are not logged in</p>
+{% endif %}
+{% endblock %}
